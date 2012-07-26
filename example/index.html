@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Fixed Element Scroll</title>
+    <style type="text/css">
+        * { padding:0; margin:0; }
+        header, footer { height:200px; border:1px solid #000; border-right:0; border-left:0; }
+        section { margin:0 auto; width:80%; height:800px; border:2px solid #000; border-top:0; border-bottom:0; }
+        .fixed-elem { border:2px solid #ec008c; height:500px; width:250px; }
+    </style>
+  </head>
+  <body>
+      <div class="container">
+          <header></header>
+          <section>
+            <div class="fixed-elem"></div>
+          </section>
+          <footer></footer>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+      <script src="../fixedElemScroll.jquery.js"></script>
+      <script>$('.fixed-elem').fixedElemScroll();</script>
+  </body>
+</html>
