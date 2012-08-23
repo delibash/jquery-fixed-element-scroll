@@ -7,11 +7,16 @@
     $.fn.fixedElemScroll = function(options) {
       // public methods to be called from outside the plugin
       var methods = {}
-      // if options is a tsring then it's trying to call a public method
+
+      var $this = $(this),
+          $window = $(window),
+          settings,
+          process;
+
+      // if options is a string then it's trying to call a public method
       if (typeof options === "string") return methods[options].apply(this, Array.prototype.slice.call(arguments, 1));
-      var $this = $(this);
-      var $window = $(window);
-      var settings = $.extend({
+      
+      settings = $.extend({
         $parent:  $this.parent(),
         // if the parent's element position is static, bottom will be the difference between the bottom of the parent element
         // and the bottom of the closest parent element with a position not equal "static"
