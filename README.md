@@ -1,8 +1,8 @@
 What does it do?
 ================
 
-If an image needs to stick to the bottom of the page, you would just use position=fixed, right?
-But what if it needed to stick to the bottom of the page but had to stay inside its parent.
+If an image needs to stick to the bottom of the page, you'd usually just use position: fixed.
+But what if it needed to stick to the bottom of the page only while inside its parent & while the parent's Y offset was inside the viewport.
 In other words, if the user scrolls past its parent, the image element needs to stick to the bottom of the parent (i.e. position: absolute, bottom: 0),
 and if the user scrolls to the top of the page, the image element needs to stay on top of its parent (i.e. position: static)
 
